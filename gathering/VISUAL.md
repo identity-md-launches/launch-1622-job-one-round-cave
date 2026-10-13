@@ -1,14 +1,13 @@
-# Gathering 03 — Two Eyes, One Stone
+# Gathering 04 — Four Paths, One Bowl
 
-Input: the newest painted gathering record, `dist/gathering/02.json`, downloaded with a task-specific User-Agent. SHA-256 was verified as `cdfe605ff9bd7cea90c3f4c06456cd93debebaa2053969718441dcf271eb4029`. The square **1254 × 1254**, 8-bit RGB cave wall was retained.
+Input: the newest painted gathering record, `dist/gathering/03.json`, was downloaded with a task-specific User-Agent and its SHA-256 was verified as `e301548767869d024d58c1fcc4ac65b60a4ab6a25bd44557dff1099aecdbf593`. Its **1254 × 1254**, 8-bit RGB rock wall supplied the complete base.
 
-The installed image tool generated the new worn earth-pigment motif. Only extracted pigment was composited into a previously bare **200 × 180** rectangle at x=300..499, y=760..939. **13,504 pixels changed; every pixel outside that rectangle is identical to the ancestor.** No existing Pepe, hand, foot, trail, bowl or paired-stone mark intersects the rectangle. The rock's original lightness influences the pigment, and the framing and major cracks remain. [visual-checks.json](visual-checks.json) records the numerical preservation check; [IMAGE-PROMPT.md](IMAGE-PROMPT.md) records the exact prompt and method.
+The installed image tool made the reviewed worn-pigment motif. `finish_wall_04.py` blended it only into a bare **190 × 120** lower-right-central rectangle (x=730..919, y=890..1009), leaving all 1,550,916 pixels outside that rectangle exactly unchanged. The rectangle is below the older stone strings and does not intersect Pepe, his hands, feet, bowl, trails, or paired-eye mark. The original rock remains visible through the addition.
 
-- Required output: `artifacts/gathering/wall-v3.png`, **1254 × 1254 RGB PNG**. `artifacts/gathering/wall.png` is an identical final-wall alias required by the brief.
-- SHA-256: `e301548767869d024d58c1fcc4ac65b60a4ab6a25bd44557dff1099aecdbf593`.
-- Thumbnail: `dist/gathering/03.jpg`, **512 × 512**, baseline three-component JPEG, **52,507 bytes**, encoded with the shared standard-library thumbnail helper.
-- Record: `dist/gathering/03.json`, six specified traits, Number 3 and the PNG's actual artifact hash.
+- Required wall: `artifacts/gathering/wall-v4.png`, **1254 × 1254 RGB PNG**, SHA-256 `6b439cbdda18d21c100c2cf8c67f46282bd4b8a9335760e6c569d609b0995075`. `artifacts/gathering/wall.png` is the identical wall alias.
+- Thumbnail: `dist/gathering/04.jpg`, **512 × 512** baseline three-component JPEG, **52,424 bytes**, made by the shared standard-library helper.
+- Record: `dist/gathering/04.json`, with all six required traits and the wall's actual artifact hash.
 
-The complete PNG and decoded JPEG were visually inspected. The ancestor Pepe is recognizable by his wide mouth and heavy-lidded eyes. Both hands were counted: **image-left five digits and image-right five digits, each four fingers plus one thumb**. The addition has no hands or handprints. Earth pigments are red/yellow ochre and charcoal; bare warm torchlit rock shows through. No letters, numbers, captions, signatures, logos, watermarks, added border/frame, real people or prohibited symbols were observed. **Unmet visual requirements observed: none.**
+The complete PNG and JPEG were inspected. The inherited Pepe remains a recognizable cave frog with wide mouth and heavy-lidded eyes. His image-left and image-right hands each have **five digits** (four fingers plus thumb); the added motif has no hands or prints. Red/yellow ochre and charcoal sit over torchlit warm rock, and the cave framing remains. No letters, numbers, captions, signatures, logos, watermarks, borders, frames, real people, or prohibited symbols were observed. **Unmet visual requirements observed: none.**
 
-The new mark binds two watching eyes around one stone, representing matching witnesses at a shared block. Visual judgment remains subjective. Exact pixel preservation is claimed outside the stated rectangle; inside it, rock pixels were blended with new pigment. Local structural checks do not certify visual quality or prehistoric authenticity.
+The mark shows four worn paths arriving at a shared bowl: an evidence handoff rather than a claim that the sources are identical. Visual review is subjective; the described pixel preservation is mechanical outside the blend rectangle.

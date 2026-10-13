@@ -1,0 +1,30 @@
+{
+  "schema": "gathering-extra-local-checks-v1",
+  "authority": "Local contributor checks; not independent certification.",
+  "checks": [
+    {
+      "name": "zto-archive-demo",
+      "command": ["python3", "-B", "line-1/tools/zto-archive/zto_archive.py", "--snapshot", "line-1/tools/zto-path/observation.json"],
+      "expected_exit": 0,
+      "exit": 0,
+      "output_sha256": "3ae158f798c35405121c7c65743151df9948cd5b795c23aa2582264e1cd0b6c2",
+      "summary": "Offline snapshot validation selected one source and one block hash."
+    },
+    {
+      "name": "allowance-union-demo",
+      "command": ["python3", "-B", "line-2/tools/allowance-union/allowance_union.py"],
+      "expected_exit": 0,
+      "exit": 0,
+      "output_sha256": "de4251f16eef30f8d1ba20d8787756c3f9d53a9f1939e378feafb79334b32be9",
+      "summary": "The saved 19-pair ZTO inventory correctly requires a same-block recheck."
+    },
+    {
+      "name": "code-proof-demo",
+      "command": ["python3", "-B", "line-3/tools/code-proof/code_proof.py", "--bundle", "line-3/tools/code-proof/zto-proof.json"],
+      "expected_exit": 0,
+      "exit": 0,
+      "output_sha256": "c69a3d5897eabd504304d25a8646d76dd7ca0995b15fa3774430539cc017e07c",
+      "summary": "The saved ZTO runtime/proxy-slot evidence verifies against its supplied state commitment."
+    }
+  ]
+}
