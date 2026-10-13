@@ -1,0 +1,30 @@
+{
+  "name": "One Root",
+  "image": "https://api.imd.fun/artifacts/e53dac56ef1bf2451fc669fa2321c807f64251a1e9b8d19f2dfbcc3792fed032",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Moss"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 3"
+    },
+    {
+      "trait_type": "Number",
+      "value": 24
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Code Proof"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Pepe follows the branching code stones down to one root."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Ethereum executable code identity"
+    }
+  ]
+}

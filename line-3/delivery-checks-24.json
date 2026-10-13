@@ -1,0 +1,13 @@
+{
+  "goal_unchanged": true,
+  "older_records_unchanged": true,
+  "record_count": 24,
+  "new_record": "dist/line-3/24.json",
+  "wall_sha256": "e53dac56ef1bf2451fc669fa2321c807f64251a1e9b8d19f2dfbcc3792fed032",
+  "wall_bytes": 3957980,
+  "wall_copy_identical": true,
+  "jpeg_bytes": 74171,
+  "all_changes_in_scope": true,
+  "new_non_artifact_files_under_100000_bytes": true,
+  "named_output_untracked": true
+}

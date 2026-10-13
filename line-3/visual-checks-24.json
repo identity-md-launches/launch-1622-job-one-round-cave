@@ -1,0 +1,34 @@
+{
+  "inherited_sha256": "db1c29bc56c3f2029e25af026a72a34419fe0b178f6a2fbb81f9e04ce47260dd",
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "final_dimensions": [
+    1254,
+    1254
+  ],
+  "changed_pixels": 91296,
+  "changed_pixels_outside_addition": 0,
+  "addition_rectangles_xywh": [
+    [
+      390,
+      165,
+      420,
+      185
+    ],
+    [
+      390,
+      350,
+      365,
+      30
+    ],
+    [
+      610,
+      380,
+      145,
+      30
+    ]
+  ],
+  "boundary_feather_pixels": 24
+}
