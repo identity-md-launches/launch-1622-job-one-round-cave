@@ -22,11 +22,19 @@ Use `live --token IMD` for the supplied real IMD contract. To check an **actual 
 python3 -B line-4/tools/call-witness/call_witness.py live --from-observation path/to/rehearsal.json --save path/to/new-witness.json
 ```
 
+By default the tool chooses the latest height finalized by both providers. A worker who needs a repeatable, already-finalized checkpoint can require one explicit hexadecimal height instead:
+
+```sh
+python3 -B line-4/tools/call-witness/call_witness.py live --block 0x18f8d21
+```
+
+Both providers must still report that exact header and must each have finalized at least that height. An unfinalized or malformed height stops before any `eth_call` is made.
+
 `--save` creates one raw evidence bundle inside the current workspace and refuses to overwrite an existing file. Replay it offline with `replay path/to/new-witness.json`. The tool never sends or signs a transaction and does not obtain a sender, recipient or value for a custom call. It repeats precisely the baseline call fields and return interpretation.
 
 ## How it works
 
-The tool confirms chain ID 1 at PublicNode and dRPC, selects the lower of their finalized heads, and requires both providers to return the same header at that height. It then uses Call Changes to confirm target code and run `eth_call` at that exact canonical block hash on each provider. Both saved observations are validated and independently reinterpreted before comparison. A header mismatch stops the check. The endpoints, headers, call fields and raw outcomes remain in the bundle.
+The tool confirms chain ID 1 at PublicNode and dRPC, selects the lower of their finalized heads (or checks an explicit height is finalized by both), and requires both providers to return the same header at that height. It then uses Call Changes to confirm target code and run `eth_call` at that exact canonical block hash on each provider. Both saved observations are validated and independently reinterpreted before comparison. A header mismatch stops the check. The endpoints, headers, call fields and raw outcomes remain in the bundle.
 
 | Verdict | Exit | Meaning |
 | --- | ---: | --- |
@@ -37,7 +45,7 @@ The tool confirms chain ID 1 at PublicNode and dRPC, selects the lower of their 
 
 ## What happened when tried
 
-On 2026-10-13, `live --save line-4/tools/call-witness/zto-witness.json` completed in about one second against both public endpoints and returned `agree`. The saved block and value above came from those calls. `live --token IMD` also returned `agree` at finalized block `0x18f8d41`, with both providers reporting `4174529951491000000000000` base units. The offline `demo` exited 0, and six focused tests passed. Tests also exercise a conflicting result, a different block, a duplicate provider, and a mismatched finalized header. These failure examples are synthetic; no live disagreement was observed.
+On 2026-10-13, `live --save line-4/tools/call-witness/zto-witness.json` completed in about one second against both public endpoints and returned `agree`. The saved block and value above came from those calls. `live --token IMD` also returned `agree` at finalized block `0x18f8d41`, with both providers reporting `4174529951491000000000000` base units. The offline `demo` exited 0. On this contribution, `live --block 0x18f8d21` confirmed the common header but returned `inconclusive`: dRPC returned the saved ZTO value while PublicNode reported that its historical state was unavailable. That is an honest non-success result, not an agreement claim. The focused tests cover a conflicting result, a different block, a duplicate provider, a mismatched finalized header, explicit shared-block selection, and rejection of an unfinalized requested height. These failure examples are synthetic; no live disagreement was observed.
 
 ```sh
 python3 -B -m unittest discover -s line-4/tools/call-witness -p 'test_*.py' -v

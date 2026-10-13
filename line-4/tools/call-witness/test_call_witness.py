@@ -57,6 +57,18 @@ class WitnessTests(unittest.TestCase):
         self.assertEqual(tool.common_finalized(FakeRPC(common),
                          FakeRPC(later, {'0xa': common})), common)
 
+    def test_explicit_finalized_block_is_shared_and_pinned(self):
+        chosen = {'number': '0xa', 'hash': '0x' + 'ab'*32, 'timestamp': '0x64'}
+        left_head = {'number': '0xb', 'hash': '0x' + 'bc'*32, 'timestamp': '0x70'}
+        right_head = {'number': '0xc', 'hash': '0x' + 'cd'*32, 'timestamp': '0x7c'}
+        self.assertEqual(tool.common_finalized(FakeRPC(left_head, {'0xa': chosen}),
+                         FakeRPC(right_head, {'0xa': chosen}), '0xa'), chosen)
+
+    def test_explicit_block_newer_than_finalized_head_is_rejected(self):
+        head = {'number': '0xa', 'hash': '0x' + 'ab'*32, 'timestamp': '0x64'}
+        with self.assertRaisesRegex(ValueError, 'newer'):
+            tool.common_finalized(FakeRPC(head), FakeRPC(head), '0xb')
+
     def test_disagreeing_common_header_rejected(self):
         one = {'number': '0xa', 'hash': '0x' + 'ab'*32, 'timestamp': '0x64'}
         two = {'number': '0xa', 'hash': '0x' + 'cd'*32, 'timestamp': '0x64'}

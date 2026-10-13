@@ -15,13 +15,17 @@ SCHEMA = 'call-witness-v1'
 MAX_BUNDLE = 95_000
 
 
-def common_finalized(left, right):
-    """Choose a height finalized by both endpoints and verify its header agrees."""
+def common_finalized(left, right, block='finalized'):
+    """Choose a mutually finalized requested height and verify its header agrees."""
+    block = changes.block_selector(block)
     heads = []
     for rpc in (left, right):
         core.require(rpc.call('eth_chainId', []) == '0x1', 'expected Ethereum mainnet')
         heads.append(core.header(rpc.call('eth_getBlockByNumber', ['finalized', False])))
-    height = min(core.quantity(head['number']) for head in heads)
+    height = (min(core.quantity(head['number']) for head in heads) if block == 'finalized'
+              else core.quantity(block))
+    core.require(all(height <= core.quantity(head['number']) for head in heads),
+                 'requested block is newer than a provider finalized head')
     selected = []
     for rpc, head in zip((left, right), heads):
         if core.quantity(head['number']) == height:
@@ -63,11 +67,11 @@ def witness(observations):
     }
 
 
-def capture_pair(tx, returns, clients=None):
+def capture_pair(tx, returns, clients=None, block='finalized'):
     tx = core.transaction(tx)
     core.require(returns in ('raw', 'bool', 'uint256'), 'unsupported return interpretation')
     left, right = clients or tuple(core.RPC(endpoint) for endpoint in core.ENDPOINTS)
-    selected = common_finalized(left, right)
+    selected = common_finalized(left, right, block)
     block = selected['number']
     observations = [changes.capture(rpc, tx, returns, block) for rpc in (left, right)]
     core.require(all(core.header(obs['block']) == selected for obs in observations),
@@ -105,6 +109,8 @@ def main(argv=None):
     live = commands.add_parser('live', help='read two public RPCs; no transaction sent')
     live.add_argument('--token', choices=core.TOKENS, default='ZTO')
     live.add_argument('--from-observation', help='reuse exact call and return type from a saved rehearsal')
+    live.add_argument('--block', default='finalized',
+                      help='finalized or a canonical hexadecimal block number finalized by both providers')
     live.add_argument('--save', help='create a new raw witness bundle within the workspace')
     args = parser.parse_args(argv)
     try:
@@ -123,7 +129,7 @@ def main(argv=None):
             if destination:
                 core.require(not destination.exists(), 'save destination already exists')
                 core.require(destination.parent.is_dir(), 'save parent directory does not exist')
-            observations = capture_pair(tx, returns)
+            observations = capture_pair(tx, returns, block=changes.block_selector(args.block))
             if destination:
                 with destination.open('xb') as handle:
                     handle.write(encoded_bundle(observations))
