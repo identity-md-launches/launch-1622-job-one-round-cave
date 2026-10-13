@@ -1,0 +1,206 @@
+{
+  "schema": "allowance-union-plan-v1",
+  "chain_id": 1,
+  "token": "ZTO",
+  "token_address": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+  "decimals": 18,
+  "status": "requires_recheck",
+  "complete_wallet_audit": false,
+  "pair_count": 19,
+  "owner_count": 16,
+  "inputs": [
+    {
+      "sha256_canonical_json": "d5df91c8e4271c3afa6f28c32e49a54311a0093c8167bbc9d94eb91990a9c18a",
+      "block_number": 26183751,
+      "block_hash": "0x1da3e2b8fcff2b28f8048862076f04b03db439c94f518681039870a9f1cae19d",
+      "block_time_utc": "2026-10-13T13:04:23+00:00",
+      "sources": [
+        "https://ethereum-rpc.publicnode.com"
+      ],
+      "pair_count": 19
+    },
+    {
+      "sha256_canonical_json": "ff83c81302d18c88621afd5fc3d98666e7b17c5cc40b2809078c54dd222844ae",
+      "block_number": 26184356,
+      "block_hash": "0xba406e0e0a50f2785b6eba5e3624a7e1ad88f1aa1c5d53476a25377759b10ebf",
+      "block_time_utc": "2026-10-13T15:05:59+00:00",
+      "sources": [
+        "https://ethereum-rpc.publicnode.com"
+      ],
+      "pair_count": 0
+    },
+    {
+      "sha256_canonical_json": "fbd1234e99c681315786a728c0e703506a7b4721029ce44b191397987ca648bd",
+      "block_number": 26184897,
+      "block_hash": "0xbcad3af0fad3def330e01bef9d4352ae1fd1b1b1c17dad252205aecf2c807563",
+      "block_time_utc": "2026-10-13T16:54:47+00:00",
+      "sources": [
+        "https://ethereum-rpc.publicnode.com"
+      ],
+      "pair_count": 19
+    }
+  ],
+  "pairs": [
+    {
+      "owner": "0x051fae10d5237bf7262d8477e2771c14545b5b97",
+      "spender": "0xccc88a9d1b4ed6b0eaba998850414b24f1c315be",
+      "source_sha256": [
+        "d5df91c8e4271c3afa6f28c32e49a54311a0093c8167bbc9d94eb91990a9c18a",
+        "fbd1234e99c681315786a728c0e703506a7b4721029ce44b191397987ca648bd"
+      ]
+    },
+    {
+      "owner": "0x2c6b6955ea01546343c363d8efbb31fac3f8cfb2",
+      "spender": "0xccc88a9d1b4ed6b0eaba998850414b24f1c315be",
+      "source_sha256": [
+        "d5df91c8e4271c3afa6f28c32e49a54311a0093c8167bbc9d94eb91990a9c18a",
+        "fbd1234e99c681315786a728c0e703506a7b4721029ce44b191397987ca648bd"
+      ]
+    },
+    {
+      "owner": "0x35f4b9acd41584df18e88cc7ebfbd2ea1e270f62",
+      "spender": "0x4313c378cc91ea583c91387b9216e2c03096b27f",
+      "source_sha256": [
+        "d5df91c8e4271c3afa6f28c32e49a54311a0093c8167bbc9d94eb91990a9c18a",
+        "fbd1234e99c681315786a728c0e703506a7b4721029ce44b191397987ca648bd"
+      ]
+    },
+    {
+      "owner": "0x37b4df3817b864d6afa56a21bd92933f4721a1b6",
+      "spender": "0x0000000000001ff3684f28c67538d4d072c22734",
+      "source_sha256": [
+        "d5df91c8e4271c3afa6f28c32e49a54311a0093c8167bbc9d94eb91990a9c18a",
+        "fbd1234e99c681315786a728c0e703506a7b4721029ce44b191397987ca648bd"
+      ]
+    },
+    {
+      "owner": "0x4662b891269e2196e67cca73e4b7812dd91c7ae3",
+      "spender": "0x0000000000001ff3684f28c67538d4d072c22734",
+      "source_sha256": [
+        "d5df91c8e4271c3afa6f28c32e49a54311a0093c8167bbc9d94eb91990a9c18a",
+        "fbd1234e99c681315786a728c0e703506a7b4721029ce44b191397987ca648bd"
+      ]
+    },
+    {
+      "owner": "0x632ee80c099662ee9880d04a307401de195dabf8",
+      "spender": "0x765956a7307222346b08fff681820a5d77e92028",
+      "source_sha256": [
+        "d5df91c8e4271c3afa6f28c32e49a54311a0093c8167bbc9d94eb91990a9c18a",
+        "fbd1234e99c681315786a728c0e703506a7b4721029ce44b191397987ca648bd"
+      ]
+    },
+    {
+      "owner": "0x77460867cc5e9b19cda24040e0d28e08b6916c76",
+      "spender": "0xccc88a9d1b4ed6b0eaba998850414b24f1c315be",
+      "source_sha256": [
+        "d5df91c8e4271c3afa6f28c32e49a54311a0093c8167bbc9d94eb91990a9c18a",
+        "fbd1234e99c681315786a728c0e703506a7b4721029ce44b191397987ca648bd"
+      ]
+    },
+    {
+      "owner": "0x799feaf061773be889d8a029d7381e24f79ac08e",
+      "spender": "0x227be0f88ecb7899a0e6e0347888b909d622c8e1",
+      "source_sha256": [
+        "d5df91c8e4271c3afa6f28c32e49a54311a0093c8167bbc9d94eb91990a9c18a",
+        "fbd1234e99c681315786a728c0e703506a7b4721029ce44b191397987ca648bd"
+      ]
+    },
+    {
+      "owner": "0x824932206b216977e3a94094a9d6ecfc6851f0c8",
+      "spender": "0x02e5be68d46dac0b524905bff209cf47ee6db2a9",
+      "source_sha256": [
+        "d5df91c8e4271c3afa6f28c32e49a54311a0093c8167bbc9d94eb91990a9c18a",
+        "fbd1234e99c681315786a728c0e703506a7b4721029ce44b191397987ca648bd"
+      ]
+    },
+    {
+      "owner": "0xb78c3a71ecf26ade99056db53da01d78d3261e8f",
+      "spender": "0xccc88a9d1b4ed6b0eaba998850414b24f1c315be",
+      "source_sha256": [
+        "d5df91c8e4271c3afa6f28c32e49a54311a0093c8167bbc9d94eb91990a9c18a",
+        "fbd1234e99c681315786a728c0e703506a7b4721029ce44b191397987ca648bd"
+      ]
+    },
+    {
+      "owner": "0xb92fe925dc43a0ecde6c8b1a2709c170ec4fff4f",
+      "spender": "0x0000000000001ff3684f28c67538d4d072c22734",
+      "source_sha256": [
+        "d5df91c8e4271c3afa6f28c32e49a54311a0093c8167bbc9d94eb91990a9c18a",
+        "fbd1234e99c681315786a728c0e703506a7b4721029ce44b191397987ca648bd"
+      ]
+    },
+    {
+      "owner": "0xb92fe925dc43a0ecde6c8b1a2709c170ec4fff4f",
+      "spender": "0x0005ea683517b3a4463bfd798c9850ad2d586795",
+      "source_sha256": [
+        "d5df91c8e4271c3afa6f28c32e49a54311a0093c8167bbc9d94eb91990a9c18a",
+        "fbd1234e99c681315786a728c0e703506a7b4721029ce44b191397987ca648bd"
+      ]
+    },
+    {
+      "owner": "0xb92fe925dc43a0ecde6c8b1a2709c170ec4fff4f",
+      "spender": "0x6131b5fae19ea4f9d964eac0408e4408b66337b5",
+      "source_sha256": [
+        "d5df91c8e4271c3afa6f28c32e49a54311a0093c8167bbc9d94eb91990a9c18a",
+        "fbd1234e99c681315786a728c0e703506a7b4721029ce44b191397987ca648bd"
+      ]
+    },
+    {
+      "owner": "0xbadb536e95f450a4978445d7a0e363a42ec37eb4",
+      "spender": "0x765956a7307222346b08fff681820a5d77e92028",
+      "source_sha256": [
+        "d5df91c8e4271c3afa6f28c32e49a54311a0093c8167bbc9d94eb91990a9c18a",
+        "fbd1234e99c681315786a728c0e703506a7b4721029ce44b191397987ca648bd"
+      ]
+    },
+    {
+      "owner": "0xca1a6e5fe34293775fe0dd109d74539b567eec34",
+      "spender": "0x0000000000001ff3684f28c67538d4d072c22734",
+      "source_sha256": [
+        "d5df91c8e4271c3afa6f28c32e49a54311a0093c8167bbc9d94eb91990a9c18a",
+        "fbd1234e99c681315786a728c0e703506a7b4721029ce44b191397987ca648bd"
+      ]
+    },
+    {
+      "owner": "0xca1a6e5fe34293775fe0dd109d74539b567eec34",
+      "spender": "0x02e5be68d46dac0b524905bff209cf47ee6db2a9",
+      "source_sha256": [
+        "d5df91c8e4271c3afa6f28c32e49a54311a0093c8167bbc9d94eb91990a9c18a",
+        "fbd1234e99c681315786a728c0e703506a7b4721029ce44b191397987ca648bd"
+      ]
+    },
+    {
+      "owner": "0xcb3c89c1145055a88504e71f7c5ad733169be093",
+      "spender": "0x40aa958dd87fc8305b97f2ba922cddca374bcd7f",
+      "source_sha256": [
+        "d5df91c8e4271c3afa6f28c32e49a54311a0093c8167bbc9d94eb91990a9c18a",
+        "fbd1234e99c681315786a728c0e703506a7b4721029ce44b191397987ca648bd"
+      ]
+    },
+    {
+      "owner": "0xd5d0448415e9cb4586aa0d801be1cecaa1b1e2f7",
+      "spender": "0xccc88a9d1b4ed6b0eaba998850414b24f1c315be",
+      "source_sha256": [
+        "d5df91c8e4271c3afa6f28c32e49a54311a0093c8167bbc9d94eb91990a9c18a",
+        "fbd1234e99c681315786a728c0e703506a7b4721029ce44b191397987ca648bd"
+      ]
+    },
+    {
+      "owner": "0xdd0c9e144197502537cef07eb7b7cb787c9d05ec",
+      "spender": "0x40aa958dd87fc8305b97f2ba922cddca374bcd7f",
+      "source_sha256": [
+        "d5df91c8e4271c3afa6f28c32e49a54311a0093c8167bbc9d94eb91990a9c18a",
+        "fbd1234e99c681315786a728c0e703506a7b4721029ce44b191397987ca648bd"
+      ]
+    }
+  ],
+  "limitations": [
+    "This is a union of known identities, not a current allowance or permission-policy decision.",
+    "Zero allowances and pairs absent from later scans remain in the recheck inventory.",
+    "Empty scans do not clear older pairs; unknown spenders outside supplied evidence remain unknown.",
+    "Recheck all listed pairs at one block before passing evidence to a policy checker.",
+    "Permit2 sub-permissions, unused signatures and custom token authorizations are omitted.",
+    "Input hashes bind normalized JSON content; RPC evidence is not a cryptographic chain proof."
+  ],
+  "demonstration": true
+}

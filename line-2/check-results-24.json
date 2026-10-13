@@ -1,0 +1,127 @@
+{
+  "tests_passed": 95,
+  "checks": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "line-2/tools/allowance-lens",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "output": "test_capture_replays_real_responses_with_hash_pinning (test_allowance_lens.AllowanceLensTests.test_capture_replays_real_responses_with_hash_pinning) ... ok\ntest_duplicate_removed_and_out_of_window_logs_fail (test_allowance_lens.AllowanceLensTests.test_duplicate_removed_and_out_of_window_logs_fail) ... ok\ntest_empty_window_does_not_claim_wallet_is_safe (test_allowance_lens.AllowanceLensTests.test_empty_window_does_not_claim_wallet_is_safe) ... ok\ntest_event_amount_is_not_used_as_current_allowance (test_allowance_lens.AllowanceLensTests.test_event_amount_is_not_used_as_current_allowance) ... ok\ntest_explicit_pairs_do_not_scan_logs (test_allowance_lens.AllowanceLensTests.test_explicit_pairs_do_not_scan_logs) ... ok\ntest_finite_allowance_caps_spendable_amount (test_allowance_lens.AllowanceLensTests.test_finite_allowance_caps_spendable_amount) ... ok\ntest_integer_formatting_never_uses_float (test_allowance_lens.AllowanceLensTests.test_integer_formatting_never_uses_float) ... ok\ntest_log_header_mismatch_fails (test_allowance_lens.AllowanceLensTests.test_log_header_mismatch_fails) ... ok\ntest_missing_or_duplicate_state_results_fail (test_allowance_lens.AllowanceLensTests.test_missing_or_duplicate_state_results_fail) ... ok\ntest_offline_cli_never_constructs_rpc (test_allowance_lens.AllowanceLensTests.test_offline_cli_never_constructs_rpc) ... ok\ntest_offline_cli_rejects_live_query_options (test_allowance_lens.AllowanceLensTests.test_offline_cli_rejects_live_query_options) ... ok\ntest_owner_filter_limits_discovery (test_allowance_lens.AllowanceLensTests.test_owner_filter_limits_discovery) ... ok\ntest_owner_total_does_not_double_count_balance (test_allowance_lens.AllowanceLensTests.test_owner_total_does_not_double_count_balance) ... ok\ntest_query_limits_are_enforced_before_network (test_allowance_lens.AllowanceLensTests.test_query_limits_are_enforced_before_network) ... ok\ntest_real_observation_matches_recorded_report (test_allowance_lens.AllowanceLensTests.test_real_observation_matches_recorded_report) ... ok\ntest_reorg_is_rejected (test_allowance_lens.AllowanceLensTests.test_reorg_is_rejected) ... ok\ntest_shuffled_events_are_order_independent (test_allowance_lens.AllowanceLensTests.test_shuffled_events_are_order_independent) ... ok\ntest_transport_rejects_send_methods_before_opening (test_allowance_lens.AllowanceLensTests.test_transport_rejects_send_methods_before_opening) ... ok\ntest_workspace_boundary_rejected_without_reading (test_allowance_lens.AllowanceLensTests.test_workspace_boundary_rejected_without_reading) ... ok\ntest_wrong_chain_stops_before_state_queries (test_allowance_lens.AllowanceLensTests.test_wrong_chain_stops_before_state_queries) ... ok\ntest_wrong_chain_token_and_decimals_fail (test_allowance_lens.AllowanceLensTests.test_wrong_chain_token_and_decimals_fail) ... ok\ntest_zero_balance_is_not_revocation (test_allowance_lens.AllowanceLensTests.test_zero_balance_is_not_revocation) ... ok\n\n----------------------------------------------------------------------\nRan 22 tests in 0.161s\n\nOK\n"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "line-2/tools/allowance-changes",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "output": "test_all_allowance_transitions_and_exact_integer_deltas (test_allowance_changes.ChangesTests.test_all_allowance_transitions_and_exact_integer_deltas) ... ok\ntest_backwards_timestamp_is_rejected (test_allowance_changes.ChangesTests.test_backwards_timestamp_is_rejected) ... ok\ntest_bad_raw_calldata_and_missing_response_fail (test_allowance_changes.ChangesTests.test_bad_raw_calldata_and_missing_response_fail) ... ok\ntest_bounded_worker_success_and_error (test_allowance_changes.ChangesTests.test_bounded_worker_success_and_error) ... ok\ntest_changed_decimals_are_not_compared (test_allowance_changes.ChangesTests.test_changed_decimals_are_not_compared) ... ok\ntest_changed_token_is_not_compared (test_allowance_changes.ChangesTests.test_changed_token_is_not_compared) ... ok\ntest_cli_requires_both_offline_inputs_and_explicit_refresh_inventory (test_allowance_changes.ChangesTests.test_cli_requires_both_offline_inputs_and_explicit_refresh_inventory) ... ok\ntest_conflicting_balance_between_disjoint_pairs_of_same_owner_fails (test_allowance_changes.ChangesTests.test_conflicting_balance_between_disjoint_pairs_of_same_owner_fails) ... ok\ntest_empty_balance_preserves_active_permission (test_allowance_changes.ChangesTests.test_empty_balance_preserves_active_permission) ... ok\ntest_invalid_deadlines_fail_before_start (test_allowance_changes.ChangesTests.test_invalid_deadlines_fail_before_start) ... ok\ntest_inventory_can_be_refreshed_again (test_allowance_changes.ChangesTests.test_inventory_can_be_refreshed_again) ... ok\ntest_missing_pair_is_unknown_not_zero (test_allowance_changes.ChangesTests.test_missing_pair_is_unknown_not_zero) ... ok\ntest_mixed_blocks_duplicate_pairs_and_empty_bundles_fail (test_allowance_changes.ChangesTests.test_mixed_blocks_duplicate_pairs_and_empty_bundles_fail) ... ok\ntest_newly_observed_is_not_newly_approved (test_allowance_changes.ChangesTests.test_newly_observed_is_not_newly_approved) ... ok\ntest_offline_command_cannot_construct_rpc (test_allowance_changes.ChangesTests.test_offline_command_cannot_construct_rpc) ... ok\ntest_order_independence (test_allowance_changes.ChangesTests.test_order_independence) ... ok\ntest_owner_cap_does_not_double_count_overlapping_spenders (test_allowance_changes.ChangesTests.test_owner_cap_does_not_double_count_overlapping_spenders) ... ok\ntest_real_capture_preserves_all_nineteen_pairs (test_allowance_changes.ChangesTests.test_real_capture_preserves_all_nineteen_pairs) ... ok\ntest_real_empty_recent_window_does_not_erase_nineteen_permissions (test_allowance_changes.ChangesTests.test_real_empty_recent_window_does_not_erase_nineteen_permissions) ... ok\ntest_refresh_replays_real_capture_with_hash_pins_and_no_event_scan (test_allowance_changes.ChangesTests.test_refresh_replays_real_capture_with_hash_pins_and_no_event_scan) ... ok\ntest_reorg_of_either_header_is_rejected (test_allowance_changes.ChangesTests.test_reorg_of_either_header_is_rejected) ... ok\ntest_requested_numeric_block_must_match (test_allowance_changes.ChangesTests.test_requested_numeric_block_must_match) ... ok\ntest_retired_relay_is_rejected_and_current_route_is_allowed (test_allowance_changes.ChangesTests.test_retired_relay_is_rejected_and_current_route_is_allowed) ... ok\ntest_same_block_conflicts_fail_but_identical_replay_works (test_allowance_changes.ChangesTests.test_same_block_conflicts_fail_but_identical_replay_works) ... ok\ntest_same_height_different_hash_and_backwards_time_fail (test_allowance_changes.ChangesTests.test_same_height_different_hash_and_backwards_time_fail) ... ok\ntest_total_deadline_terminates_blocked_worker (test_allowance_changes.ChangesTests.test_total_deadline_terminates_blocked_worker) ... ok\ntest_totals_exclude_unmeasured_pairs (test_allowance_changes.ChangesTests.test_totals_exclude_unmeasured_pairs) ... ok\ntest_workspace_and_overwrite_guards (test_allowance_changes.ChangesTests.test_workspace_and_overwrite_guards) ... ok\ntest_wrong_chain_fails_before_any_state_reads (test_allowance_changes.ChangesTests.test_wrong_chain_fails_before_any_state_reads) ... ok\n\n----------------------------------------------------------------------\nRan 29 tests in 1.264s\n\nOK\n"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "line-2/tools/permission-gate",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "output": "test_block_interval_is_inclusive (test_permission_gate.GateTests.test_block_interval_is_inclusive) ... ok\ntest_case_normalized_duplicate_pairs_rejected (test_permission_gate.GateTests.test_case_normalized_duplicate_pairs_rejected) ... ok\ntest_corrupt_evidence_is_rejected_not_a_policy_pass (test_permission_gate.GateTests.test_corrupt_evidence_is_rejected_not_a_policy_pass) ... ok\ntest_demo_is_offline_and_matches_delivered_report (test_permission_gate.GateTests.test_demo_is_offline_and_matches_delivered_report) ... ok\ntest_duplicate_json_keys_rejected (test_permission_gate.GateTests.test_duplicate_json_keys_rejected) ... ok\ntest_empty_real_event_scan_never_passes (test_permission_gate.GateTests.test_empty_real_event_scan_never_passes) ... ok\ntest_enforcement_exit_codes_and_json (test_permission_gate.GateTests.test_enforcement_exit_codes_and_json) ... ok\ntest_exact_real_limits_pass_only_measured_pairs (test_permission_gate.GateTests.test_exact_real_limits_pass_only_measured_pairs) ... ok\ntest_integer_precision_and_uint256_boundaries (test_permission_gate.GateTests.test_integer_precision_and_uint256_boundaries) ... ok\ntest_invalid_intervals_rejected (test_permission_gate.GateTests.test_invalid_intervals_rejected) ... ok\ntest_limit_one_unit_below_real_allowance_denies (test_permission_gate.GateTests.test_limit_one_unit_below_real_allowance_denies) ... ok\ntest_missing_required_evidence_overrides_even_known_violation (test_permission_gate.GateTests.test_missing_required_evidence_overrides_even_known_violation) ... ok\ntest_nonethereum_chain_and_boolean_rejected (test_permission_gate.GateTests.test_nonethereum_chain_and_boolean_rejected) ... ok\ntest_oversized_policy_rejected (test_permission_gate.GateTests.test_oversized_policy_rejected) ... ok\ntest_policy_token_mismatch_rejected (test_permission_gate.GateTests.test_policy_token_mismatch_rejected) ... ok\ntest_real_deny_all_exposes_three_permissions_including_empty_balances (test_permission_gate.GateTests.test_real_deny_all_exposes_three_permissions_including_empty_balances) ... ok\ntest_unknown_policy_fields_and_schema_rejected (test_permission_gate.GateTests.test_unknown_policy_fields_and_schema_rejected) ... ok\ntest_unpaired_arguments_are_error (test_permission_gate.GateTests.test_unpaired_arguments_are_error) ... ok\ntest_workspace_path_rejects_external_input (test_permission_gate.GateTests.test_workspace_path_rejects_external_input) ... ok\ntest_zero_address_rejected (test_permission_gate.GateTests.test_zero_address_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 20 tests in 0.089s\n\nOK\n"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "line-2/tools/allowance-union",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "output": "test_backwards_recheck_and_timestamp_rejected (test_allowance_union.UnionTests.test_backwards_recheck_and_timestamp_rejected) ... ok\ntest_chain_reorg_and_wrong_requested_block_fail (test_allowance_union.UnionTests.test_chain_reorg_and_wrong_requested_block_fail) ... ok\ntest_cli_refuses_implicit_live_or_unused_options (test_allowance_union.UnionTests.test_cli_refuses_implicit_live_or_unused_options) ... ok\ntest_complementary_real_subsets_union_without_duplicate_pairs (test_allowance_union.UnionTests.test_complementary_real_subsets_union_without_duplicate_pairs) ... ok\ntest_complete_recheck_is_coverage_not_policy_approval (test_allowance_union.UnionTests.test_complete_recheck_is_coverage_not_policy_approval) ... ok\ntest_conflicting_headers_rejected_even_without_common_pairs (test_allowance_union.UnionTests.test_conflicting_headers_rejected_even_without_common_pairs) ... ok\ntest_default_demo_has_no_network (test_allowance_union.UnionTests.test_default_demo_has_no_network) ... ok\ntest_disjoint_spenders_still_need_consistent_owner_balance (test_allowance_union.UnionTests.test_disjoint_spenders_still_need_consistent_owner_balance) ... ok\ntest_empty_inventory_cannot_pass (test_allowance_union.UnionTests.test_empty_inventory_cannot_pass) ... ok\ntest_explicit_incomplete_recheck_exit_four (test_allowance_union.UnionTests.test_explicit_incomplete_recheck_exit_four) ... ok\ntest_extra_measured_pairs_are_reported (test_allowance_union.UnionTests.test_extra_measured_pairs_are_reported) ... ok\ntest_identity_mismatch_rejected (test_allowance_union.UnionTests.test_identity_mismatch_rejected) ... ok\ntest_malformed_evidence_rejected_before_rpc (test_allowance_union.UnionTests.test_malformed_evidence_rejected_before_rpc) ... ok\ntest_missing_recent_pairs_stay_unknown (test_allowance_union.UnionTests.test_missing_recent_pairs_stay_unknown) ... ok\ntest_no_or_too_many_inputs_rejected (test_allowance_union.UnionTests.test_no_or_too_many_inputs_rejected) ... ok\ntest_order_independence_and_duplicate_input_idempotence (test_allowance_union.UnionTests.test_order_independence_and_duplicate_input_idempotence) ... ok\ntest_partial_recheck_does_not_pass (test_allowance_union.UnionTests.test_partial_recheck_does_not_pass) ... ok\ntest_public_endpoints_only (test_allowance_union.UnionTests.test_public_endpoints_only) ... ok\ntest_real_empty_scan_cannot_erase_older_pairs (test_allowance_union.UnionTests.test_real_empty_scan_cannot_erase_older_pairs) ... ok\ntest_real_rpc_replay_reads_all_pairs_at_one_hash (test_allowance_union.UnionTests.test_real_rpc_replay_reads_all_pairs_at_one_hash) ... ok\ntest_same_block_state_conflict_rejected (test_allowance_union.UnionTests.test_same_block_state_conflict_rejected) ... ok\ntest_strict_json_and_workspace_boundary (test_allowance_union.UnionTests.test_strict_json_and_workspace_boundary) ... ok\ntest_union_cap_rejected_without_truncation (test_allowance_union.UnionTests.test_union_cap_rejected_without_truncation) ... ok\ntest_zero_allowances_remain_in_inventory (test_allowance_union.UnionTests.test_zero_allowances_remain_in_inventory) ... ok\n\n----------------------------------------------------------------------\nRan 24 tests in 0.190s\n\nOK\n"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "line-2/tools/allowance-lens/allowance_lens.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "stdout_sha256": "315b3c658fb2b18fa9fde99a98bc908059b0c056b8f9e2d39c5ddf8b798d2d03"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "line-2/tools/allowance-changes/allowance_changes.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "stdout_sha256": "413c6553dfd332a4575e74d30b054352593dd20e529c62126ef9230b003695e7"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "line-2/tools/permission-gate/permission_gate.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "stdout_sha256": "14bad9182bcb7d537df8feaa9ccfe3661cd6437e596bb61e603253eefb49eac2"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "line-2/tools/allowance-union/allowance_union.py"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "stdout_sha256": "de4251f16eef30f8d1ba20d8787756c3f9d53a9f1939e378feafb79334b32be9"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "line-2/tools/allowance-union/allowance_union.py",
+        "--input",
+        "line-2/tools/allowance-lens/observation.json",
+        "--after",
+        "line-2/tools/allowance-changes/lens-recheck.json"
+      ],
+      "expected_exit": 4,
+      "actual_exit": 4,
+      "stdout_sha256": "dff7652dafeaf559733fb51a9b63670a9cede6c9dfe2b69c63b0da7880526d28"
+    }
+  ]
+}

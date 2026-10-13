@@ -1,0 +1,24 @@
+{
+  "fresh_observation_saved": false,
+  "interpretation": "No new chain-state measurement is claimed; bundled real historical observations remain replayable.",
+  "attempts": [
+    {
+      "endpoint": "https://ethereum-rpc.publicnode.com",
+      "timeout_seconds": 40,
+      "exit": 143,
+      "error": "Background process ended with status 143; no report or saved observation."
+    },
+    {
+      "endpoint": "https://ethereum-rpc.publicnode.com",
+      "timeout_seconds": 20,
+      "exit": 1,
+      "error": "live read exceeded total deadline of 20.0 seconds"
+    },
+    {
+      "endpoint": "https://eth.drpc.org",
+      "timeout_seconds": 35,
+      "exit": 1,
+      "error": "live read exceeded total deadline of 35.0 seconds"
+    }
+  ]
+}

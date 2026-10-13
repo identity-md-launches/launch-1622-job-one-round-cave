@@ -1,0 +1,50 @@
+{
+  "ancestor_sha256": "bbcaef4dac2a6a1459a8c4e7b55dcc6d26c1f753947e7a63c73e38772a529274",
+  "outputs": [
+    {
+      "path": "artifacts/line-2/wall.png",
+      "format": "PNG",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "bytes": 3942917,
+      "sha256": "cd80330d897598928f981281cb2443a05994963ce62cb908108b037b7b917e5c"
+    },
+    {
+      "path": "artifacts/line-2/wall-v4.png",
+      "format": "PNG",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "bytes": 3942917,
+      "sha256": "cd80330d897598928f981281cb2443a05994963ce62cb908108b037b7b917e5c"
+    },
+    {
+      "path": "dist/line-2/24.jpg",
+      "format": "JPEG",
+      "dimensions": [
+        512,
+        512
+      ],
+      "bytes": 55020,
+      "sha256": "eec11dc26644345a5fe6a581193663970481f0b59803d5a2c7be81018112554d"
+    }
+  ],
+  "addition_rectangle": {
+    "x": 800,
+    "y": 320,
+    "width": 225,
+    "height": 225
+  },
+  "changed_pixels": 5082,
+  "pixels_outside_addition_identical": true,
+  "unmet_visual_requirements": [],
+  "visual_review": "Finished PNG and 512px JPEG inspected. Inherited Pepe and marks remain; no text or prohibited symbols observed; five digits on each of two inherited hands; no new hands. Local assessment only.",
+  "inherited_hand_digit_counts": [
+    5,
+    5
+  ],
+  "new_hands": 0
+}

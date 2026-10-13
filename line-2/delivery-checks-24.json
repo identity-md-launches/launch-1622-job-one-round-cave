@@ -1,0 +1,21 @@
+{
+  "scope_check": "passed",
+  "goal_unchanged": true,
+  "older_records_unchanged": true,
+  "new_record": 24,
+  "wall_png_dimensions": [
+    1254,
+    1254
+  ],
+  "jpeg_dimensions": [
+    512,
+    512
+  ],
+  "png_crc_checks": "passed",
+  "record_sha256_matches": true,
+  "artifact_pngs_untracked": true,
+  "unmet_visual_requirements": [],
+  "line_tests_passed": 95,
+  "cli_checks_passed": 5,
+  "live_limitation": "Both public RPC attempts exceeded total deadlines; no fresh observation saved."
+}
